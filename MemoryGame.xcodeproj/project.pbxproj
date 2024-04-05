@@ -19,6 +19,11 @@
 		3FADA4862BC042BC009B8590 /* CardUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADA4852BC042BC009B8590 /* CardUi.swift */; };
 		3FADA4892BC0449B009B8590 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADA4882BC0449B009B8590 /* GameViewModel.swift */; };
 		3FADA48D2BC047C8009B8590 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADA48C2BC047C8009B8590 /* GameScreen.swift */; };
+		A2598B622BC07585006BF5CF /* MenuCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B612BC07585006BF5CF /* MenuCard.swift */; };
+		A2598B642BC07739006BF5CF /* Dificulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B632BC07739006BF5CF /* Dificulty.swift */; };
+		A2598B662BC078EB006BF5CF /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B652BC078EB006BF5CF /* MenuScreen.swift */; };
+		A2598B682BC07B97006BF5CF /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B672BC07B97006BF5CF /* MenuViewModel.swift */; };
+		A2598B6A2BC07C8A006BF5CF /* GameTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B692BC07C8A006BF5CF /* GameTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,11 @@
 		3FADA4852BC042BC009B8590 /* CardUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUi.swift; sourceTree = "<group>"; };
 		3FADA4882BC0449B009B8590 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		3FADA48C2BC047C8009B8590 /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
+		A2598B612BC07585006BF5CF /* MenuCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCard.swift; sourceTree = "<group>"; };
+		A2598B632BC07739006BF5CF /* Dificulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dificulty.swift; sourceTree = "<group>"; };
+		A2598B652BC078EB006BF5CF /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
+		A2598B672BC07B97006BF5CF /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		A2598B692BC07C8A006BF5CF /* GameTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +114,7 @@
 		3FADA44F2BC030AB009B8590 /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				A2598B5E2BC0747E006BF5CF /* Menu */,
 				3FADA4872BC04467009B8590 /* Game */,
 				3FADA4842BC0429F009B8590 /* Ui */,
 				3FADA47B2BC032DC009B8590 /* Models */,
@@ -145,6 +156,8 @@
 			children = (
 				3FADA4802BC03BB0009B8590 /* Card.swift */,
 				3FADA4822BC03DED009B8590 /* CardGame.swift */,
+				A2598B632BC07739006BF5CF /* Dificulty.swift */,
+				A2598B692BC07C8A006BF5CF /* GameTheme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				3FADA4852BC042BC009B8590 /* CardUi.swift */,
+				A2598B612BC07585006BF5CF /* MenuCard.swift */,
 			);
 			path = Ui;
 			sourceTree = "<group>";
@@ -164,6 +178,15 @@
 				3FADA48C2BC047C8009B8590 /* GameScreen.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		A2598B5E2BC0747E006BF5CF /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A2598B652BC078EB006BF5CF /* MenuScreen.swift */,
+				A2598B672BC07B97006BF5CF /* MenuViewModel.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,9 +319,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2598B662BC078EB006BF5CF /* MenuScreen.swift in Sources */,
 				3FADA4892BC0449B009B8590 /* GameViewModel.swift in Sources */,
 				3FADA4532BC030AB009B8590 /* ContentView.swift in Sources */,
+				A2598B642BC07739006BF5CF /* Dificulty.swift in Sources */,
+				A2598B622BC07585006BF5CF /* MenuCard.swift in Sources */,
+				A2598B682BC07B97006BF5CF /* MenuViewModel.swift in Sources */,
 				3FADA4832BC03DED009B8590 /* CardGame.swift in Sources */,
+				A2598B6A2BC07C8A006BF5CF /* GameTheme.swift in Sources */,
 				3FADA4812BC03BB0009B8590 /* Card.swift in Sources */,
 				3FADA4512BC030AB009B8590 /* MemoryGameApp.swift in Sources */,
 				3FADA48D2BC047C8009B8590 /* GameScreen.swift in Sources */,
