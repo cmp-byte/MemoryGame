@@ -39,7 +39,8 @@ struct GameScreen: View {
                 Spacer()
             }
             if (viewModel.gameState == .not_started) {
-                Button(action: {viewModel.shuffleButton()}, label: {
+                Button(action: {
+                    withAnimation{viewModel.shuffleButton()}}, label: {
                     Text("Start")
                 })
             } else if (viewModel.gameState == .in_progress) {
