@@ -21,8 +21,13 @@ struct GameScreen: View {
                 ScrollView {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 65, maximum: 150))], content: {
                         ForEach(viewModel.cardsList, content: {card in
-                            CardUi(color: viewModel.cardsColor, text: card.data, match: card.isMatched, face: card.isVisible, cardSymbol: viewModel.cardsSymbol).onTapGesture {
-                                viewModel.chooseCard(card)
+                            CardUi(color: viewModel.cardsColor, text: card.data, match: card.isMatched, 
+                                   cardSymbol: viewModel.cardsSymbol,
+                                face: card.isVisible ).onTapGesture {
+                                withAnimation(.easeInOut(duration : 3), {
+                                    viewModel.chooseCard(card)
+                                })
+                               
                             }.aspectRatio(2/3, contentMode: .fit)
                         })
                     })
@@ -40,7 +45,9 @@ struct GameScreen: View {
             }
             if (viewModel.gameState == .not_started) {
                 Button(action: {
-                    withAnimation{viewModel.shuffleButton()}}, label: {
+                    withAnimation{
+                        viewModel.shuffleButton()
+                    }}, label: {
                     Text("Start")
                 })
             } else if (viewModel.gameState == .in_progress) {
