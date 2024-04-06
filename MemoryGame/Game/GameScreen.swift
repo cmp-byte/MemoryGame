@@ -8,21 +8,27 @@
 import SwiftUI
 
 struct GameScreen: View {
+    private var idiom : UIUserInterfaceIdiom { UIDevice.current.userInterfaceIdiom }
     @ObservedObject var viewModel : GameViewModel
     @State private var playerName: String = ""
+
+    var minimumGridSize: CGFloat {
+        switch (idiom) {
+        case .pad: return 150
+        default: return 64
+        }
+    }
 
     var body: some View {
         VStack{
             Text(viewModel.title)
-                .frame(maxWidth: .infinity, alignment: .leading).font(.title.bold())
+                .frame(maxWidth: .infinity, alignment: .leading).font(.title.bold()).font(.largeTitle)
             Text("Score:\(viewModel.score)")
-                .fontWeight(.bold)
-
-
+                .fontWeight(.bold).font(.largeTitle)
 
                 if(viewModel.gameState == .in_progress || viewModel.gameState == .not_started){
                     ScrollView {
-                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 65, maximum: 150))], content: {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: minimumGridSize))], content: {
                             ForEach(viewModel.cardsList, content: {card in
                                 CardUi(color: viewModel.cardsColor, text: card.data, match: card.isMatched,
                                        cardSymbol: viewModel.cardsSymbol,
@@ -31,21 +37,21 @@ struct GameScreen: View {
                                         viewModel.chooseCard(card)
                                     })
 
-                                }.aspectRatio(2/3, contentMode: .fit)
+                                }.aspectRatio(2/3, contentMode: .fill)
                             })
                         })
                     }
                 }
 
-                if (viewModel.gameState == .not_started) {
+                if viewModel.gameState == .not_started {
                     Button(action: {
                         withAnimation{
                             viewModel.shuffleButton()
                         }}, label: {
-                            Text("Start").foregroundColor(ColorScheme.text.color)
+                            Text("Start").foregroundColor(ColorScheme.text.color).font(.largeTitle)
                         })
-                } else if (viewModel.gameState == .in_progress) {
-                    Text("Lives: \(viewModel.model.attemptsLeft)❤️").foregroundColor(ColorScheme.text.color)
+                } else if viewModel.gameState == .in_progress {
+                    Text("Lives: \(viewModel.model.attemptsLeft)❤️").foregroundColor(ColorScheme.text.color).font(.largeTitle)
 
                     Spacer()
 
@@ -56,7 +62,7 @@ struct GameScreen: View {
                     }
                 }
                 else if(viewModel.gameState == .lost || viewModel.gameState == .won){
-                    Text(viewModel.gameState == .lost ? "GAME OVER" : "YOU WIN").foregroundStyle(viewModel.gameState == .lost ? ColorScheme.text.color : Color(.green) )
+                    Text(viewModel.gameState == .lost ? "GAME OVER" : "YOU WIN").foregroundStyle(viewModel.gameState == .lost ? ColorScheme.text.color : Color(.green) ).font(.largeTitle)
                     ScrollView{
                         LeaderBoard(names: viewModel.leaderBoard)
                     }
@@ -81,7 +87,7 @@ struct GameScreen: View {
                     Button {
                         viewModel.resetGameButton()
                     } label: {
-                        Text("Retry")
+                        Text("Retry").font(.largeTitle)
                     }
 
 
