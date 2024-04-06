@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardUi: View {
+struct CardUi: View, Animatable {
     let color: Color
     let text: String
     let match: Bool
@@ -21,11 +21,11 @@ struct CardUi: View {
         self.match = match
         self.cardSymbol = cardSymbol
         self.face = face
-        self.rotation = face ? 0 : 180
-        
+        self.rotation = !face ? 0 : 180
+
     }
     
-    var animatableData: Double{
+    var animatableData: Double {
         get { rotation}
         set { rotation = newValue }
     }
@@ -41,16 +41,16 @@ struct CardUi: View {
             RoundedRectangle(cornerRadius:20)
                 .foregroundColor(color)
             if (rotation > 90) {
-                Text(cardSymbol).font(.largeTitle)
-                
-            } else {
                 Text(text).font(.largeTitle)
+
+            } else {
+                Text(cardSymbol).font(.largeTitle)
             }
             
-        }.opacity(ob).rotation3DEffect(
+        }.rotation3DEffect(
             Angle.degrees(rotation),
             axis: (x: 0.0, y: 1.0, z: 0.0)
-        )
+        ).opacity(ob)
     }
 }
 

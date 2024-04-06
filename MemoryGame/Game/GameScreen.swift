@@ -24,7 +24,7 @@ struct GameScreen: View {
                             CardUi(color: viewModel.cardsColor, text: card.data, match: card.isMatched, 
                                    cardSymbol: viewModel.cardsSymbol,
                                 face: card.isVisible ).onTapGesture {
-                                withAnimation(.easeInOut(duration : 3), {
+                                withAnimation(.easeInOut(duration : 1), {
                                     viewModel.chooseCard(card)
                                 })
                                
