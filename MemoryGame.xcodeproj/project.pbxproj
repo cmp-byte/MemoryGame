@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3FADA4512BC030AB009B8590 /* MemoryGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADA4502BC030AB009B8590 /* MemoryGameApp.swift */; };
-		3FADA4532BC030AB009B8590 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADA4522BC030AB009B8590 /* ContentView.swift */; };
 		3FADA4552BC030AC009B8590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FADA4542BC030AC009B8590 /* Assets.xcassets */; };
 		3FADA4582BC030AC009B8590 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FADA4572BC030AC009B8590 /* Preview Assets.xcassets */; };
 		3FADA4622BC030AC009B8590 /* MemoryGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADA4612BC030AC009B8590 /* MemoryGameTests.swift */; };
@@ -23,7 +22,7 @@
 		A2598B642BC07739006BF5CF /* Dificulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B632BC07739006BF5CF /* Dificulty.swift */; };
 		A2598B662BC078EB006BF5CF /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B652BC078EB006BF5CF /* MenuScreen.swift */; };
 		A2598B682BC07B97006BF5CF /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B672BC07B97006BF5CF /* MenuViewModel.swift */; };
-		A2598B6A2BC07C8A006BF5CF /* GameTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B692BC07C8A006BF5CF /* GameTheme.swift */; };
+		A2D6A9462BC16F29008E2932 /* libGameSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D6A9452BC16F18008E2932 /* libGameSource.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +45,6 @@
 /* Begin PBXFileReference section */
 		3FADA44D2BC030AB009B8590 /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FADA4502BC030AB009B8590 /* MemoryGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameApp.swift; sourceTree = "<group>"; };
-		3FADA4522BC030AB009B8590 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3FADA4542BC030AC009B8590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FADA4572BC030AC009B8590 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3FADA45D2BC030AC009B8590 /* MemoryGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +61,7 @@
 		A2598B632BC07739006BF5CF /* Dificulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dificulty.swift; sourceTree = "<group>"; };
 		A2598B652BC078EB006BF5CF /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
 		A2598B672BC07B97006BF5CF /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
-		A2598B692BC07C8A006BF5CF /* GameTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTheme.swift; sourceTree = "<group>"; };
+		A2D6A9452BC16F18008E2932 /* libGameSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGameSource.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D6A9462BC16F29008E2932 /* libGameSource.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +97,7 @@
 				3FADA4602BC030AC009B8590 /* MemoryGameTests */,
 				3FADA46A2BC030AC009B8590 /* MemoryGameUITests */,
 				3FADA44E2BC030AB009B8590 /* Products */,
+				A2D6A9442BC16F18008E2932 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,7 +119,6 @@
 				3FADA4842BC0429F009B8590 /* Ui */,
 				3FADA47B2BC032DC009B8590 /* Models */,
 				3FADA4502BC030AB009B8590 /* MemoryGameApp.swift */,
-				3FADA4522BC030AB009B8590 /* ContentView.swift */,
 				3FADA4542BC030AC009B8590 /* Assets.xcassets */,
 				3FADA4562BC030AC009B8590 /* Preview Content */,
 			);
@@ -157,7 +156,6 @@
 				3FADA4802BC03BB0009B8590 /* Card.swift */,
 				3FADA4822BC03DED009B8590 /* CardGame.swift */,
 				A2598B632BC07739006BF5CF /* Dificulty.swift */,
-				A2598B692BC07C8A006BF5CF /* GameTheme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,6 +185,14 @@
 				A2598B672BC07B97006BF5CF /* MenuViewModel.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		A2D6A9442BC16F18008E2932 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2D6A9452BC16F18008E2932 /* libGameSource.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,12 +327,10 @@
 			files = (
 				A2598B662BC078EB006BF5CF /* MenuScreen.swift in Sources */,
 				3FADA4892BC0449B009B8590 /* GameViewModel.swift in Sources */,
-				3FADA4532BC030AB009B8590 /* ContentView.swift in Sources */,
 				A2598B642BC07739006BF5CF /* Dificulty.swift in Sources */,
 				A2598B622BC07585006BF5CF /* MenuCard.swift in Sources */,
 				A2598B682BC07B97006BF5CF /* MenuViewModel.swift in Sources */,
 				3FADA4832BC03DED009B8590 /* CardGame.swift in Sources */,
-				A2598B6A2BC07C8A006BF5CF /* GameTheme.swift in Sources */,
 				3FADA4812BC03BB0009B8590 /* Card.swift in Sources */,
 				3FADA4512BC030AB009B8590 /* MemoryGameApp.swift in Sources */,
 				3FADA48D2BC047C8009B8590 /* GameScreen.swift in Sources */,
@@ -505,10 +509,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.memo.MemoryGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -533,10 +542,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.memo.MemoryGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

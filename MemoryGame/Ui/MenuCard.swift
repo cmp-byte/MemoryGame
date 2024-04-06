@@ -6,29 +6,21 @@
 //
 
 import SwiftUI
+import GameSource
 
 struct MenuCard: View {
-    let emoji: String
-    let title: String
-    let onPressed: (Dificulty) -> Void
+    let gameTheme: GameTheme
+
     var body: some View {
         VStack{
-            Text(title).font(.largeTitle)
-            Text(emoji)
+            Text(gameTheme.title).font(.largeTitle)
+            Text(gameTheme.card_symbol)
             HStack{
                 ForEach(Dificulty.allCases, content: { dificulty in
-                    Text(dificulty.rawValue.capitalized).foregroundStyle(.blue).underline().onTapGesture {
-                        onPressed(dificulty)
+                    NavigationLink(destination: GameScreen(viewModel: GameViewModel(gameTheme: gameTheme, dificulty: dificulty))) { Text(dificulty.rawValue.capitalized).foregroundStyle(.blue).underline()
                     }
                 })
             }
         }
-    }
-}
-
-
-#Preview {
-    MenuCard(emoji: ":)", title: "Titlu") { dificulty in
-
     }
 }

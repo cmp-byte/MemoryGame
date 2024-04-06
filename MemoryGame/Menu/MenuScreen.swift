@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GameSource
 
 struct MenuScreen: View {
     
@@ -21,14 +22,20 @@ struct MenuScreen: View {
         case .loading:
             ProgressView()
         case .idle(let themes):
-            ForEach(themes) { theme in
-                MenuCard(emoji: ":)", title: theme.nume, onPressed: { diff in
-                    menuViewModel.selectGame(theme)
-                })
-            }
-        case .inGame(_):
-            GameScreen(viewModel: GameViewModel())
+            NavigationView(content: {
+                VStack {
+                    ForEach(themes) { theme in
+                        MenuCard(gameTheme: theme)
+                    }
+                }
+            })
         }
+    }
+}
+
+extension GameTheme: Identifiable {
+    public var id: String {
+        self.title
     }
 }
 

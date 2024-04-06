@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import GameSource
 class MenuViewModel: ObservableObject {
     @Published private (set) var model: MenuState
     
@@ -16,15 +17,16 @@ class MenuViewModel: ObservableObject {
 
     func startLoading(){
         model = .loading
-        //processing
-        model = .idle(x: [GameTheme(nume: "Bazinga", id: 1)])
-    }
-
-    func selectGame(_ theme: GameTheme) {
-        model = .inGame(x: theme)
+        Task.init {
+            do {
+                model = .idle(x: try await GameSource.getRemote())
+            } catch {
+                model = .error
+            }
+        }
     }
 
 }
 enum MenuState{
-    case error, loading, idle(x: [GameTheme]), inGame(x: GameTheme)
+    case error, loading, idle(x: [GameTheme])
 }

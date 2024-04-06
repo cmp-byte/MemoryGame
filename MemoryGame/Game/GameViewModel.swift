@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GameSource
 
 class GameViewModel: ObservableObject {
     @Published private (set) var model: CardGame
@@ -23,11 +24,11 @@ class GameViewModel: ObservableObject {
     var cardsSymbol: String
     
     
-    init() {
-        self.model = CardGame(["z","x","y"])
-        self.title = "Joc de memorie"
-        self.cardsColor =  Color(red: 0.5, green: 0, blue: 0.5)
-        self.cardsSymbol = "BackGround"
+    init(gameTheme: GameTheme, dificulty: Dificulty) {
+        self.model = CardGame(gameTheme.symbols)
+        self.title = gameTheme.title
+        self.cardsColor =  gameTheme.color
+        self.cardsSymbol = gameTheme.card_symbol
         
     }
     

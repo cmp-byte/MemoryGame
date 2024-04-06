@@ -64,7 +64,3 @@ struct GameScreen: View {
         }.padding()
     }
 }
-
-#Preview {
-    GameScreen(viewModel:  GameViewModel())
-}
