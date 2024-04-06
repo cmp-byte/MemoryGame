@@ -19,7 +19,7 @@
 		3FADA4892BC0449B009B8590 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADA4882BC0449B009B8590 /* GameViewModel.swift */; };
 		3FADA48D2BC047C8009B8590 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADA48C2BC047C8009B8590 /* GameScreen.swift */; };
 		A2598B622BC07585006BF5CF /* MenuCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B612BC07585006BF5CF /* MenuCard.swift */; };
-		A2598B642BC07739006BF5CF /* Dificulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B632BC07739006BF5CF /* Dificulty.swift */; };
+		A2598B642BC07739006BF5CF /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B632BC07739006BF5CF /* Difficulty.swift */; };
 		A2598B662BC078EB006BF5CF /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B652BC078EB006BF5CF /* MenuScreen.swift */; };
 		A2598B682BC07B97006BF5CF /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B672BC07B97006BF5CF /* MenuViewModel.swift */; };
 		A2D6A9462BC16F29008E2932 /* libGameSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D6A9452BC16F18008E2932 /* libGameSource.a */; };
@@ -58,7 +58,7 @@
 		3FADA4882BC0449B009B8590 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		3FADA48C2BC047C8009B8590 /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
 		A2598B612BC07585006BF5CF /* MenuCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCard.swift; sourceTree = "<group>"; };
-		A2598B632BC07739006BF5CF /* Dificulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dificulty.swift; sourceTree = "<group>"; };
+		A2598B632BC07739006BF5CF /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		A2598B652BC078EB006BF5CF /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
 		A2598B672BC07B97006BF5CF /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		A2D6A9452BC16F18008E2932 /* libGameSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGameSource.a; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 			children = (
 				3FADA4802BC03BB0009B8590 /* Card.swift */,
 				3FADA4822BC03DED009B8590 /* CardGame.swift */,
-				A2598B632BC07739006BF5CF /* Dificulty.swift */,
+				A2598B632BC07739006BF5CF /* Difficulty.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,7 +327,7 @@
 			files = (
 				A2598B662BC078EB006BF5CF /* MenuScreen.swift in Sources */,
 				3FADA4892BC0449B009B8590 /* GameViewModel.swift in Sources */,
-				A2598B642BC07739006BF5CF /* Dificulty.swift in Sources */,
+				A2598B642BC07739006BF5CF /* Difficulty.swift in Sources */,
 				A2598B622BC07585006BF5CF /* MenuCard.swift in Sources */,
 				A2598B682BC07B97006BF5CF /* MenuViewModel.swift in Sources */,
 				3FADA4832BC03DED009B8590 /* CardGame.swift in Sources */,

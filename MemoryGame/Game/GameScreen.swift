@@ -9,7 +9,6 @@ import SwiftUI
 
 struct GameScreen: View {
     @ObservedObject var viewModel : GameViewModel
-    
     var body: some View {
         VStack{
             Text(viewModel.title)

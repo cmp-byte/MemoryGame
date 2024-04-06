@@ -6,10 +6,10 @@
 //
 
 import Foundation
-enum Dificulty: String, CaseIterable {
+enum Difficulty: String, CaseIterable {
     case easy, medium, hard
 }
 
-extension Dificulty: Identifiable {
+extension Difficulty: Identifiable {
     var id: String { rawValue }
 }

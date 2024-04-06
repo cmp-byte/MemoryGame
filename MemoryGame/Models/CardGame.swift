@@ -9,10 +9,13 @@ import Foundation
 struct CardGame{
     var cardsList: Array<Card>
     private(set) var score: Int = 0
-    private(set) var  attemptsLeft: Int = 10
+    private(set) var  attemptsLeft: Int
     var timeStartTimestamp: Double = -1
     let maxDurationSeconds: Double
     var isGameFinished: Bool = false
+    let difficulty: Difficulty
+    
+
     private var hotStreak: Int = 0
     var isWon: Bool{
         cardsList.filter { card in
@@ -25,14 +28,26 @@ struct CardGame{
         timeStartTimestamp != -1
     }
     
-    init(_ cardsDataList: Array<String>) {
+    init(_ cardsDataList: Array<String>, dificulty: Difficulty) {
         var index = -2
+        self.difficulty = dificulty
         self.cardsList = Array(cardsDataList.map({ cardData in
             index += 2
             return [Card(id: index ,data: cardData), Card(id : index + 1,data: cardData)]
         }).joined())
-        maxDurationSeconds = Double(10 * self.cardsList.count)
-        
+
+        switch (difficulty) {
+
+        case .easy: attemptsLeft = 10
+                    maxDurationSeconds = Double(10 * self.cardsList.count)
+
+        case .medium: attemptsLeft = 7
+                    maxDurationSeconds = Double(7 * self.cardsList.count)
+
+        case .hard: attemptsLeft = 5
+                    maxDurationSeconds = Double(5 * self.cardsList.count)
+        }
+
     }
     
     mutating func shuffleCards(){
@@ -72,7 +87,11 @@ struct CardGame{
             keepScore()
             return
         }
-        
+
+        if self.difficulty == .hard{
+            shuffleCards()
+        }
+
         decrementAttempts()
         
     }

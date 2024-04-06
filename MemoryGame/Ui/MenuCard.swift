@@ -16,7 +16,7 @@ struct MenuCard: View {
             Text(gameTheme.title).font(.largeTitle)
             Text(gameTheme.card_symbol)
             HStack{
-                ForEach(Dificulty.allCases, content: { dificulty in
+                ForEach(Difficulty.allCases, content: { dificulty in
                     NavigationLink(destination: GameScreen(viewModel: GameViewModel(gameTheme: gameTheme, dificulty: dificulty))) { Text(dificulty.rawValue.capitalized).foregroundStyle(.blue).underline()
                     }
                 })

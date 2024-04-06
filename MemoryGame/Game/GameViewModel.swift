@@ -24,8 +24,8 @@ class GameViewModel: ObservableObject {
     var cardsSymbol: String
     
     
-    init(gameTheme: GameTheme, dificulty: Dificulty) {
-        self.model = CardGame(gameTheme.symbols)
+    init(gameTheme: GameTheme, dificulty: Difficulty) {
+        self.model = CardGame(gameTheme.symbols, dificulty: dificulty)
         self.title = gameTheme.title
         self.cardsColor =  gameTheme.color
         self.cardsSymbol = gameTheme.card_symbol
