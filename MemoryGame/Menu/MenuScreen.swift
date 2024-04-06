@@ -9,7 +9,8 @@ import SwiftUI
 import GameSource
 
 struct MenuScreen: View {
-    
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+
     @ObservedObject var menuViewModel : MenuViewModel = MenuViewModel()
 
     var body: some View {
@@ -23,9 +24,19 @@ struct MenuScreen: View {
             ProgressView()
         case .idle(let themes):
             NavigationView(content: {
-                VStack {
-                    ForEach(themes) { theme in
-                        MenuCard(gameTheme: theme)
+
+                switch(verticalSizeClass) {
+                case .compact:
+                    HStack {
+                        ForEach(themes) { theme in
+                            MenuCard(gameTheme: theme).padding()
+                        }
+                    }
+                default:
+                    VStack {
+                        ForEach(themes) { theme in
+                            MenuCard(gameTheme: theme).padding()
+                        }
                     }
                 }
             })
