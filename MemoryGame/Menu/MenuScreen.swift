@@ -15,9 +15,9 @@ struct MenuScreen: View {
     var body: some View {
         switch menuViewModel.model{
         case .error:
-            Text("Failed Loading")
+            Text("Failed Loading").foregroundColor(ColorScheme.error.color)
             Button(action: {menuViewModel.startLoading()}, label: {
-                Text("Retry")
+                Text("Retry").foregroundColor(ColorScheme.link.color)
             })
         case .loading:
             ProgressView()

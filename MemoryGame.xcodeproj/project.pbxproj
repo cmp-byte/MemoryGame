@@ -23,6 +23,7 @@
 		A2598B662BC078EB006BF5CF /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B652BC078EB006BF5CF /* MenuScreen.swift */; };
 		A2598B682BC07B97006BF5CF /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B672BC07B97006BF5CF /* MenuViewModel.swift */; };
 		A2D6A9462BC16F29008E2932 /* libGameSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D6A9452BC16F18008E2932 /* libGameSource.a */; };
+		A2D6A9512BC19F8C008E2932 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6A9502BC19F8C008E2932 /* ColorScheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		A2598B652BC078EB006BF5CF /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
 		A2598B672BC07B97006BF5CF /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		A2D6A9452BC16F18008E2932 /* libGameSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGameSource.a; sourceTree = "<group>"; };
+		A2D6A9502BC19F8C008E2932 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				3FADA4852BC042BC009B8590 /* CardUi.swift */,
 				A2598B612BC07585006BF5CF /* MenuCard.swift */,
+				A2D6A9502BC19F8C008E2932 /* ColorScheme.swift */,
 			);
 			path = Ui;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				A2598B622BC07585006BF5CF /* MenuCard.swift in Sources */,
 				A2598B682BC07B97006BF5CF /* MenuViewModel.swift in Sources */,
 				3FADA4832BC03DED009B8590 /* CardGame.swift in Sources */,
+				A2D6A9512BC19F8C008E2932 /* ColorScheme.swift in Sources */,
 				3FADA4812BC03BB0009B8590 /* Card.swift in Sources */,
 				3FADA4512BC030AB009B8590 /* MemoryGameApp.swift in Sources */,
 				3FADA48D2BC047C8009B8590 /* GameScreen.swift in Sources */,

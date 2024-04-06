@@ -35,10 +35,10 @@ struct GameScreen: View {
             else{
                 Spacer()
                 if(viewModel.gameState == .won){
-                    Text("You won!!!")
+                    Text("You won!!!").foregroundColor(ColorScheme.text.color)
                 }
                 else{
-                    Text("You lost!")
+                    Text("You lost!").foregroundColor(ColorScheme.text.color)
                 }
                 Spacer()
             }
@@ -47,10 +47,10 @@ struct GameScreen: View {
                     withAnimation{
                         viewModel.shuffleButton()
                     }}, label: {
-                    Text("Start")
+                    Text("Start").foregroundColor(ColorScheme.text.color)
                 })
             } else if (viewModel.gameState == .in_progress) {
-                Text("Lives: \(viewModel.model.attemptsLeft)❤️")
+                Text("Lives: \(viewModel.model.attemptsLeft)❤️").foregroundColor(ColorScheme.text.color)
 
                 Spacer()
                 
