@@ -13,7 +13,8 @@ class GameViewModel: ObservableObject {
     
     var score : Int {model.score}
     var title: String
-    
+    var leaderBoard : [Leader] = []
+
     @Published
     var remainingTime: Double = 0
     
@@ -22,14 +23,15 @@ class GameViewModel: ObservableObject {
     
     var cardsColor: Color
     var cardsSymbol: String
-    
+    var wasSaved: Bool {return self.model.wasSaved}
+
     
     init(gameTheme: GameTheme, dificulty: Difficulty) {
-        self.model = CardGame(gameTheme.symbols, dificulty: dificulty)
+        self.model = CardGame(gameTheme.symbols, dificulty: dificulty, title: gameTheme.title)
         self.title = gameTheme.title
         self.cardsColor =  gameTheme.color
         self.cardsSymbol = gameTheme.card_symbol
-        
+        updateLeaderboard()
     }
     
     
@@ -37,7 +39,20 @@ class GameViewModel: ObservableObject {
         model.cardsList
     }
 
-    
+    func updateLeaderboard () {
+        self.leaderBoard = UserDefaults.standard.dictionary(forKey: self.title).map({ dict in
+            dict.map { (key: String, value: Any) in
+                Leader(name: key, score: value as! Int)
+            }
+        }) ?? []
+        leaderBoard =  leaderBoard.sorted(by: { $0.score > $1.score })
+    }
+
+    func savePlayer(name: String){
+        model.saveResult(name: name)
+        updateLeaderboard()
+    }
+
     func chooseCard(_ chosenCard: Card){
         model.chooseCard(chosenCard)
         
@@ -49,7 +64,13 @@ class GameViewModel: ObservableObject {
         gameState = .in_progress
  
     }
-    
+
+
+    func resetGameButton(){
+        model.fullResetBoard()
+        gameState = .not_started
+    }
+
     func updateTime() {
         let currentTime = NSDate().timeIntervalSince1970 * 1000
         remainingTime = 1 - ((currentTime - model.timeStartTimestamp) / (model.maxDurationSeconds * 1000))
@@ -67,7 +88,7 @@ class GameViewModel: ObservableObject {
         }
 
     }
- 
+
 }
 
 enum GameState {

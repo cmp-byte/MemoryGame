@@ -24,6 +24,8 @@
 		A2598B682BC07B97006BF5CF /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2598B672BC07B97006BF5CF /* MenuViewModel.swift */; };
 		A2D6A9462BC16F29008E2932 /* libGameSource.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D6A9452BC16F18008E2932 /* libGameSource.a */; };
 		A2D6A9512BC19F8C008E2932 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6A9502BC19F8C008E2932 /* ColorScheme.swift */; };
+		A2D6A9532BC1A6A2008E2932 /* LeaderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6A9522BC1A6A2008E2932 /* LeaderBoard.swift */; };
+		A2D6A9552BC1AAC1008E2932 /* Leader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6A9542BC1AAC1008E2932 /* Leader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		A2598B672BC07B97006BF5CF /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		A2D6A9452BC16F18008E2932 /* libGameSource.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGameSource.a; sourceTree = "<group>"; };
 		A2D6A9502BC19F8C008E2932 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		A2D6A9522BC1A6A2008E2932 /* LeaderBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoard.swift; sourceTree = "<group>"; };
+		A2D6A9542BC1AAC1008E2932 /* Leader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 				3FADA4802BC03BB0009B8590 /* Card.swift */,
 				3FADA4822BC03DED009B8590 /* CardGame.swift */,
 				A2598B632BC07739006BF5CF /* Difficulty.swift */,
+				A2D6A9542BC1AAC1008E2932 /* Leader.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				3FADA4852BC042BC009B8590 /* CardUi.swift */,
 				A2598B612BC07585006BF5CF /* MenuCard.swift */,
 				A2D6A9502BC19F8C008E2932 /* ColorScheme.swift */,
+				A2D6A9522BC1A6A2008E2932 /* LeaderBoard.swift */,
 			);
 			path = Ui;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2598B662BC078EB006BF5CF /* MenuScreen.swift in Sources */,
+				A2D6A9532BC1A6A2008E2932 /* LeaderBoard.swift in Sources */,
 				3FADA4892BC0449B009B8590 /* GameViewModel.swift in Sources */,
 				A2598B642BC07739006BF5CF /* Difficulty.swift in Sources */,
 				A2598B622BC07585006BF5CF /* MenuCard.swift in Sources */,
@@ -336,6 +343,7 @@
 				3FADA4832BC03DED009B8590 /* CardGame.swift in Sources */,
 				A2D6A9512BC19F8C008E2932 /* ColorScheme.swift in Sources */,
 				3FADA4812BC03BB0009B8590 /* Card.swift in Sources */,
+				A2D6A9552BC1AAC1008E2932 /* Leader.swift in Sources */,
 				3FADA4512BC030AB009B8590 /* MemoryGameApp.swift in Sources */,
 				3FADA48D2BC047C8009B8590 /* GameScreen.swift in Sources */,
 				3FADA4862BC042BC009B8590 /* CardUi.swift in Sources */,
